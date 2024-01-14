@@ -31,4 +31,6 @@ ENV GOCARDLESS_CLIENT_SECRET $GOCARDLESS_CLIENT_SECRET
 
 COPY --from=build /usr/local/bundle/ /usr/local/bundle
 
+RUN chmod +x ./scripts/start.sh
 CMD ["./scripts/start.sh"]
+
