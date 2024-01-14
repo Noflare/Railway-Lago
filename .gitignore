@@ -1,0 +1,7 @@
+node_modules
+dist
+.DS_Store
+.env
+yarn-error.log
+coverage
+ditto/*__*.json

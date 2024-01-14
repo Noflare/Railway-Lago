@@ -1,0 +1,31 @@
+{
+  "extends": ["config:base"],
+  "prConcurrentLimit": 10,
+  "prHourlyLimit": 10,
+  "prCreation": "not-pending",
+  "stabilityDays": 3,
+  "addLabels": ["🔗 dependencies"],
+  "schedule": ["after 10pm and before 5:00am"],
+  "postUpdateOptions": ["yarnDedupeHighest"],
+  "dependencyDashboardTitle": "👷‍♀️ Dependency Dashboard",
+  "dependencyDashboardHeader": "[👮‍♂️ Do not close]. This issue provides visibility into Renovate updates and their statuses. [Learn more](https://docs.renovatebot.com/key-concepts/dashboard/)",
+  "dependencyDashboardLabels": ["🙅 Don't close"],
+  "packageRules": [
+    {
+      "updateTypes": ["major"],
+      "automerge": false,
+      "commitMessagePrefix": "chore(deps-major)"
+    },
+    {
+      "updateTypes": ["minor"],
+      "automerge": false,
+      "commitMessagePrefix": "chore(deps-minor)"
+    },
+    {
+      "updateTypes": ["patch", "digest", "bump"],
+      "commitMessagePrefix": "chore(deps)",
+      "reviewers": ["renovate-approve"],
+      "automerge": true
+    }
+  ]
+}
