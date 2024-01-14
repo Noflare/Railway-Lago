@@ -5,7 +5,7 @@ WORKDIR /app
 COPY ./Gemfile /app/Gemfile
 COPY ./Gemfile.lock /app/Gemfile.lock
 
-RUN apt update -qq && apt install nodejs build-essential git pkg-config libpq-dev -y
+RUN apt update -qq && apt install nodejs build-essential git pkg-config libpq-dev libxslt1-dev libxml2-dev patch ruby-dev zlib1g-dev liblzma-dev -y
 
 ENV BUNDLER_VERSION='2.4.21'
 RUN gem install bundler --no-document -v '2.4.21'
