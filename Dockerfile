@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
 
 
 # Configuration de l'environnement local
-RUN git clone --recurse-submodules git@github.com:getlago/lago.git \
+RUN git clone -o StrictHostKeyChecking=no --recurse-submodules git@github.com:getlago/lago.git \
     && cd lago \
     && echo "export LAGO_PATH=${PWD}" >> ~/.bashrc \
     && echo 'alias lago="docker-compose -f $LAGO_PATH/docker-compose.dev.yml"' >> ~/.bashrc \
