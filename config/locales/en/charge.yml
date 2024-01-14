@@ -1,0 +1,9 @@
+---
+en:
+  activerecord:
+    errors:
+      models:
+        charge:
+          attributes:
+            group_properties:
+              taken: is duplicated

@@ -1,0 +1,16 @@
+FROM ruby:3.2.2-slim
+
+WORKDIR /app
+
+COPY ./Gemfile /app/Gemfile
+COPY ./Gemfile.lock /app/Gemfile.lock
+
+RUN apt update -qq && apt install nodejs build-essential git pkg-config libpq-dev -y
+
+ENV BUNDLER_VERSION='2.4.21'
+RUN gem install bundler --no-document -v '2.4.21'
+
+RUN bundle config build.nokogiri --use-system-libraries &&\
+ bundle install
+
+CMD ["./scripts/start.dev.sh"]

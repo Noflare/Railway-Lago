@@ -1,0 +1,24 @@
+---
+de:
+  email:
+    credit_note:
+      created:
+        credit_note_from: Gutschriftsbeleg von %{organization_name}
+        credit_note_number: Gutschriftsbelegnummer
+        credited_notice: Gutschrift auf Kundenkonto am %{date}
+        credited_refunded_notice: Dem Kundenguthaben gutgeschrieben und am %{date} zurückerstattet
+        download: Gutschriftsbeleg herunterladen, um Details anzuzeigen
+        invoice_number: Rechnungsnummer
+        issue_date: Ausstellungsdatum
+        refunded_notice: Zurückerstattet am %{date}
+        subject: 'Dein Gutschriftsbeleg von %{organization_name} #%{credit_note_number}'
+    invoice:
+      finalized:
+        download: Rechnung herunterladen, um Details anzuzeigen
+        due_date: Gesamtbetrag fällig am %{date}
+        invoice_from: Rechnung von %{organization_name}
+        invoice_number: Rechnungsnummer
+        issue_date: Ausstellungsdatum
+        subject: 'Deine Rechnung von %{organization_name} #%{invoice_number}'
+    powered_by: Bereitgestellt von
+    questions: Fragen? Kontaktiere uns unter
