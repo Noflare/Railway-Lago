@@ -9,9 +9,6 @@ RUN apt-get update && apt-get install -y \
     curl \
     openssl
 
-# Installation de Homebrew pour macOS
-RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" \
-    && brew install openssl
 
 # Configuration de l'environnement local
 RUN git clone --recurse-submodules git@github.com:getlago/lago.git \
