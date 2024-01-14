@@ -10,8 +10,8 @@ RUN apt update -qq && apt install nodejs build-essential git pkg-config libpq-de
 ENV BUNDLER_VERSION='2.4.21'
 RUN gem install bundler --no-document -v '2.4.21'
 
-RUN bundle config build.nokogiri --use-system-libraries &&\
-  bundle install --jobs=3 --retry=3 --without development test
+RUN bundle config set --local without 'development test' && \
+    bundle install --jobs=3 --retry=3
 
 FROM ruby:3.2.2-slim
 

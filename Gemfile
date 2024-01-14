@@ -13,7 +13,6 @@ gem 'clockwork', require: false
 gem 'puma', '~> 5.6'
 gem 'rails', '~> 7.0.8'
 gem 'sprockets', '~> 4.0'
-gem 'bootsnap', '~> 1.12.0'
 gem 'nokogiri', '~> 1.12.5'
 gem 'sidekiq'
 
